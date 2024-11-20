@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worten Resolve | Configuração de PC Gamer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scriptS.js" defer></script>
+</head>
+<body>
+    
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logotipo" />
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#account">login</a></li>
+                <li><a href="#cart">Cart</a></li>
+                <li><a href="#configure">Configure</a></li>
+                <li><a href="#products">Products</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <section id="home" class="home">
+        <h1>Bem-vindo ao Worten Resolve</h1>
+        <p>Explore os melhores componentes de PC gamer e crie a máquina dos seus sonhos. Personalize, jogue e alcance o desempenho máximo!</p>
+        <a href="#configure" class="btn">Monte seu PC Gamer</a>
+    </section>
+
+    
+    <section id="login" class="login">
+        <h1>Your Account</h1>
+        <form>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Introduza o seu email" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Introduza a sua password" required>
+            
+            <button type="submit">Entrar</button>
+        </form>
+        <p>Não tem uma conta? <a href="#">Registe-se aqui</a>.</p>
+    </section>
+
+    
+    <section id="cart" class="cart">
+        <h1>Your Cart</h1>
+        <p>Adicione componentes e veja aqui a sua configuração final.</p>
+        <ul id="cart-items">
+            
+        </ul>
+        <button>Finalizar Compra</button>
+    </section>
+
+    
+    <section id="configure" class="configurator">
+        <h1>Monte o Seu PC Gamer</h1>
+        <form id="pc-configurator">
+            
+            <label for="cpu">Processador (CPU):</label>
+            <select id="cpu" name="cpu">
+                <option value="">Selecione</option>
+                <option value="intel-i5">Intel Core i5 13400</option>
+                <option value="intel-i7">Intel Core i7 13700</option>
+                <option value="amd-ryzen5">AMD Ryzen 5 7600</option>
+                <option value="amd-ryzen7">AMD Ryzen 7 7800X</option>
+            </select>
+
+            
+            <label for="gpu">Placa Gráfica (GPU):</label>
+            <select id="gpu" name="gpu">
+                <option value="">Selecione</option>
+                <option value="nvidia-3060">NVIDIA RTX 3060</option>
+                <option value="nvidia-4070">NVIDIA RTX 4070</option>
+                <option value="amd-rx6700">AMD RX 6700 XT</option>
+                <option value="amd-rx7900">AMD RX 7900 XT</option>
+            </select>
+
+            
+            <label for="motherboard">Placa Mãe:</label>
+            <select id="motherboard" name="motherboard">
+                <option value="">Selecione</option>
+                <option value="intel-z790">Intel Z790</option>
+                <option value="amd-x670">AMD X670</option>
+            </select>
+
+            
+            <label for="ram">Memória RAM:</label>
+            <select id="ram" name="ram">
+                <option value="">Selecione</option>
+                <option value="ddr4-8gb">8GB DDR4 3200MHz</option>
+                <option value="ddr4-16gb">16GB DDR4 3600MHz</option>
+                <option value="ddr5-32gb">32GB DDR5 5200MHz</option>
+                <option value="ddr5-64gb">64GB DDR5 6000MHz</option>
+            </select>
+
+            
+            <label for="storage">Armazenamento:</label>
+            <select id="storage" name="storage">
+                <option value="">Selecione</option>
+                <option value="ssd-512gb">512GB SSD NVMe</option>
+                <option value="ssd-1tb">1TB SSD NVMe</option>
+                <option value="hdd-1tb">1TB HDD</option>
+                <option value="hdd-2tb">2TB HDD</option>
+            </select>
+
+            
+            <label for="cooler">Cooler:</label>
+            <select id="cooler" name="cooler">
+                <option value="">Selecione</option>
+                <option value="air-cooler">Cooler de Ar</option>
+                <option value="liquid-cooler">Cooler Líquido</option>
+            </select>
+
+            
+            <label for="psu">Fonte de Alimentação (PSU):</label>
+            <select id="psu" name="psu">
+                <option value="">Selecione</option>
+                <option value="psu-600w">600W 80+ Bronze</option>
+                <option value="psu-750w">750W 80+ Gold</option>
+                <option value="psu-850w">850W 80+ Platinum</option>
+                <option value="psu-1000w">1000W 80+ Titanium</option>
+            </select>
+
+            
+            <label for="case">Gabinete:</label>
+            <select id="case" name="case">
+                <option value="">Selecione</option>
+                <option value="mid-tower">Mid Tower (ATX)</option>
+                <option value="full-tower">Full Tower (ATX/EATX)</option>
+                <option value="mini-tower">Mini Tower (Micro-ATX)</option>
+            </select>
+
+            
+            <label for="os">Sistema Operativo:</label>
+            <select id="os" name="os">
+                <option value="">Selecione</option>
+                <option value="windows11">Windows 11</option>
+                <option value="linux">Linux (Ubuntu)</option>
+            </select>
+
+            <button type="button" onclick="verifyCompatibility()">Verificar Compatibilidade</button>
+        </form>
+        <p id="compatibility-result"></p>
+    </section>
+
+    
+    <section id="products" class="products">
+        <h1>Our Products</h1>
+        <p>Explore uma vasta gama de componentes, desde processadores até placas gráficas de última geração.</p>
+        <ul>
+            <li>Processadores</li>
+            <li>Placas Gráficas</li>
+            <li>Memórias RAM</li>
+            <li>Armazenamento</li>
+            <li>Fontes de Alimentação</li>
+        </ul>
+    </section>
+
+    
+    <footer>
+        <p>&copy; 2024 Worten Resolve. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
